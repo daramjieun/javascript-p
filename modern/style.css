@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#open {
+    color: #fff;
+    background-color: dodgerblue;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 15px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    color: black;
+    background: transparent;
+    cursor: pointer;
+}
+#modal-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* 모달 박스 내용 가운데로 위치 */
+    /* 버튼 클릭 전 나타나면 안되니까 none으로 지정 */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+/* 클릭하면 모달창 띄우기 
+display를 원래대로 되돌려 놓는다.*/
+#modal-box.active {
+    display: flex;
+}
+#modal-contents {
+    background-color: #f4f4f4;
+    padding: 30px 50px;
+    border-radius: 20px;
+    position: relative;
+}
+#title {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: lightskyblue;
+}
+#desc {
+    margin-left: 50px;
+}
+.user {
+    font-size: 18px;
+    font-weight: bolder;
+}
